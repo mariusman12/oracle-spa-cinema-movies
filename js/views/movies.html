@@ -1,0 +1,36 @@
+<div id="searchContainer">
+  <oj-input-text
+    id="searchInput"
+    placeholder="Search by name"
+    data-bind="value: searchTerm, valueUpdate: 'input'"
+  ></oj-input-text>
+</div>
+
+<div
+  class="oj-flex oj-sm-wrap oj-md-wrap oj-lg-wrap"
+  data-bind="foreach: categories"
+>
+  <div class="oj-sm-12 oj-md-6">
+    <h3 data-bind="text: name"></h3>
+    <div
+      class="oj-flex oj-sm-wrap oj-md-wrap oj-lg-wrap"
+      data-bind="foreach: cards"
+    >
+      <div class="oj-sm-12 oj-md-6">
+        <div class="oj-card">
+          <div class="oj-card-header">
+            <img
+              data-bind="attr: { src: picture }"
+              class="card-image"
+              width="300"
+              height="200"
+            />
+          </div>
+          <div class="oj-card-body">
+            <h4 data-bind="text: name"></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
