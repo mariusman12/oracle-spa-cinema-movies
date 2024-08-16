@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Avangers",
+    "longDescription": "A detailed description of the product",
+    "shortDescription": "A brief description of the product",
+    "rating": 4.5,
+    "price": 19.99,
+    "category": "Comedy",
+    "stock": 30
+  },
+  {
+    "id": 2,
+    "name": "Hulk",
+    "longDescription": "A detailed description of the product 2",
+    "shortDescription": "A brief description of the product 2",
+    "rating": 7,
+    "price": 22,
+    "category": "Horror",
+    "stock": 60
+  },
+  {
+    "id": 3,
+    "name": "Thor",
+    "longDescription": "A detailed description of the product 3",
+    "shortDescription": "A brief description of the product 3",
+    "rating": 9,
+    "price": 25,
+    "category": "Drama",
+    "stock": 30
+  },
+  {
+    "id": 4,
+    "name": "Dracula",
+    "longDescription": "A detailed description of the product",
+    "shortDescription": "A brief description of the product",
+    "rating": 9.5,
+    "price": 19.99,
+    "category": "Drama",
+    "stock": 50
+  }
+]

@@ -1,0 +1,86 @@
+<div class="oj-hybrid-padding">
+  <h1>Admin Movies</h1>
+  <div>
+    <div class="oj-flex">
+      <div class="oj-flex-item oj-panel">
+        <oj-form-layout>
+          <oj-input-number
+            id="inputID"
+            label-hint="Movie Id"
+            value="{{inputID}}"
+          ></oj-input-number>
+          <oj-input-text
+            id="inputName"
+            label-hint="Movie Name"
+            value="{{inputName}}"
+          ></oj-input-text>
+
+          <oj-input-text
+            id="inputLongDescription"
+            label-hint="Long description"
+            value="{{inputLongDescription}}"
+          ></oj-input-text>
+
+          <oj-input-text
+            id="inputShortDescription"
+            label-hint="Short description"
+            value="{{inputShortDescription}}"
+          ></oj-input-text>
+          <oj-input-number
+            id="inputRating"
+            label-hint="Rating"
+            value="{{inputRating}}"
+          ></oj-input-number>
+          <oj-input-number
+            id="inputPrice"
+            label-hint="Price"
+            value="{{inputPrice}}"
+          ></oj-input-number>
+
+          <oj-input-number
+            id="inputStock"
+            label-hint="Stock"
+            value="{{inputStock}}"
+          ></oj-input-number>
+
+          <oj-input-text
+            id="inputCategory"
+            label-hint="Category"
+            value="{{inputCategory}}"
+          ></oj-input-text>
+        </oj-form-layout>
+        <oj-toolbar chroming="outlined">
+          <oj-button id="addbutton" on-oj-action="[[addRow]]">
+            Create
+          </oj-button>
+          <oj-button id="updateButton" on-oj-action="[[updateRow]]">
+            Update
+          </oj-button>
+          <oj-button id="removeButton" on-oj-action="[[removeRow]]">
+            Remove
+          </oj-button>
+        </oj-toolbar>
+      </div>
+      <div id="tableContainer" class="oj-flex-item">
+        <oj-table
+          id="table"
+          aria-label="Movies Table"
+          accessibility.row-header="movieName"
+          class="demo-table-container oj-helper-text-align-center"
+          data="[[dataprovider]]"
+          columns='[{"headerText": "ID", "field": "id", "id": "movieId"},
+                    {"headerText": "Name", "field": "name", "id": "movieName"},
+                    {"headerText": "LongDescription", "field": "longDescription", "id": "movieLongDescription"},
+                    {"headerText": "ShortDescription ", "field": "shortDescription", "id": "movieShortDescription"},
+                    {"headerText": "Rating", "field": "rating", "id": "movieRating"},
+                    {"headerText": "Price", "field": "price", "id": "moviePrice"},
+                    {"headerText": "Category", "field": "category", "id": "movieCategory"},
+                    {"headerText": "Stock", "field": "stock", "id": "movieStockt"}]'
+          selection-mode.row="single"
+          first-selected-row="{{firstSelected}}"
+          on-first-selected-row-changed="[[firstSelectedRowChangedListener]]"
+        ></oj-table>
+      </div>
+    </div>
+  </div>
+</div>

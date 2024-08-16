@@ -1,0 +1,45 @@
+<div class="oj-hybrid-padding">
+  <h1>Statistics</h1>
+  <div class="oj-flex">
+    <div id="chart-container" class="oj-flex-item">
+      <p>Movies Rating</p>
+      <oj-chart
+        id="barChart"
+        type="bar"
+        data="[[dataProvider]]"
+        animation-on-display="auto"
+        hover-behavior="dim"
+      >
+        <template slot="itemTemplate" data-oj-as="item">
+          <oj-chart-item
+            value="[[item.data.rating]]"
+            group-id="[[ [item.data.name] ]]"
+            series-id="[[item.data.category]]"
+          ></oj-chart-item>
+        </template>
+      </oj-chart>
+    </div>
+  </div>
+  <div class="oj-flex">
+    <div id="chart-container" class="oj-flex-item">
+      <p>Tickets Chart</p>
+      <oj-chart
+        id="pieChart"
+        type="bar"
+        data="[[dataProvider]]"
+        animation-on-display="auto"
+        animation-on-data-change="auto"
+        style-defaults.three-d-effect="[[threeDValue]]"
+        hover-behavior="dim"
+      >
+        <template slot="itemTemplate" data-oj-as="item">
+          <oj-chart-item
+            value="[[item.data.price]]"
+            group-id="[[ [item.data.name] ]]"
+            series-id="[[item.data.stock]]"
+          ></oj-chart-item>
+        </template>
+      </oj-chart>
+    </div>
+  </div>
+</div>
